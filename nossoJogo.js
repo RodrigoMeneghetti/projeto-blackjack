@@ -10,3 +10,62 @@
  * 
  * 
  */
+
+alert("Boas vindas ao jogo de BlackJack!")
+
+if(confirm("Quer iniciar uma nova rodada?")){
+   alert("Iniciando nova rodada!")
+} else{
+   alert("O jogo acabou!")
+}
+
+const carta = comprarCarta();
+// Método que sorteia uma carta. Por exemplo, o rei de ouros 
+
+console.log(carta.texto) 
+// imprime o texto da carta. Nesse caso: "K♦️" 
+
+console.log(carta.valor) 
+// imprime o valor da carta (um número). Nesse caso: 10)
+
+const carta2 = comprarCarta();
+// Método que sorteia uma carta. Por exemplo, o rei de ouros 
+
+console.log(carta2.texto) 
+// imprime o texto da carta. Nesse caso: "K♦️" 
+
+console.log(carta2.valor) 
+// imprime o valor da carta (um número). Nesse caso: 10)
+
+const carta1 = comprarCarta()  // Carta atribuída ao usuário
+const carta2 = comprarCarta()  // Carta atribuída ao usuário
+const carta3 = comprarCarta()  // Carta atribuída ao computador
+const carta4 = comprarCarta()  // Carta atribuída ao computador
+
+const pontosUsuario = carta1.valor + carta2.valor      //Soma das cartas do usuário
+const pontosComputador = carta3.valor + carta4.valor   //Soma das cartas do computador
+
+
+
+console.log("Boas vindas ao jogo BlackJack!")
+
+if (confirm("Deseja iniciar uma nova partida de BlackJack?!")) {
+
+   console.log("Resultado da rodada ↓")
+
+   console.log(Usuário: ${carta1.texto} ${carta2.texto} = ${pontosUsuario})
+   console.log(Computador: ${carta3.texto} ${carta4.texto} = ${pontosComputador})
+
+if(pontosUsuario > 21){
+   console.log("O computador ganhou!")
+} else if (pontosUsuario > pontosComputador && pontosUsuario <= 21){
+   console.log("O usuário ganhou!")
+}else if (pontosComputador > 21) {
+   console.log("O usuário ganhou!")
+}else if (pontosUsuario < pontosComputador && pontosComputador <= 21){
+   console.log("O computador ganhou!")
+}else if (pontosUsuario = pontosComputador){
+   console.log("Deu empate!")
+}
+}else{
+   console.log ("Que pena que não quer jogar!")
